@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8lOtG3IhfCig2wrE3hBabgZXr/CL2EAtHuN/wjlk8lOm0J58pyIxdymEQb/l8Ppo8GbX1pFNFOo7ul+z8tIrWQ==",
+  "dgSpecHash": "X4qakiaEeOKUAShfwk9jdCplNK5cRus1m8cG748trjwFf61vs3DLTFEOK0lrmRaYRdgml5UmweHLAf5G1pEhaw==",
   "success": true,
-  "projectFilePath": "D:\\adstra_task\\adstra_task1\\Adstra_task.csproj",
+  "projectFilePath": "C:\\Users\\labuhaweleh\\Source\\Repos\\Loma-Jamal\\adstra_task\\Adstra_task.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\labuhaweleh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\labuhaweleh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

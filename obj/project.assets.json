@@ -5661,11 +5661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\adstra_task\\adstra_task1\\Adstra_task.csproj",
+      "projectUniqueName": "C:\\Users\\labuhaweleh\\Source\\Repos\\Loma-Jamal\\adstra_task\\Adstra_task.csproj",
       "projectName": "Adstra_task",
-      "projectPath": "D:\\adstra_task\\adstra_task1\\Adstra_task.csproj",
+      "projectPath": "C:\\Users\\labuhaweleh\\Source\\Repos\\Loma-Jamal\\adstra_task\\Adstra_task.csproj",
       "packagesPath": "C:\\Users\\labuhaweleh\\.nuget\\packages\\",
-      "outputPath": "D:\\adstra_task\\adstra_task1\\obj\\",
+      "outputPath": "C:\\Users\\labuhaweleh\\Source\\Repos\\Loma-Jamal\\adstra_task\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"

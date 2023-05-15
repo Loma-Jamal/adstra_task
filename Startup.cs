@@ -34,7 +34,7 @@ namespace Adstra_task
 
             services.AddCors(); // Make sure you call this previous to AddMvc
 
-          
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",
@@ -47,8 +47,7 @@ namespace Adstra_task
             });
             services.AddDistributedMemoryCache();
             services.AddResponseCaching();
-           
-     
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<AppDBContext>(options =>
             {
@@ -93,5 +92,10 @@ namespace Adstra_task
                     pattern: "{controller=Home}/{action=Login}/{id?}");
             });
         }
+
+
+
+
+
     }
 }
