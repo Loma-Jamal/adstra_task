@@ -11,7 +11,10 @@ namespace Adstra_task
     {
 
         protected AppDBContext Context { get; }
-
+        public UnitOfWork()
+        {
+            Context = new AppDBContext();
+        }
         public UnitOfWork(AppDBContext context)
         {
             Context = context;

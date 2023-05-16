@@ -9,19 +9,45 @@ using System.Threading.Tasks;
 
 namespace Adstra_task
 {
-    public class HomeController : Controller
+    public class HomeController :Controller
     {
-    
+
+        IUnitOfWork _unitOfWork;
+        Response _CallResponse = new Response();
+
 
         public IActionResult Login()
         {
             return View();
         }
 
+        public HomeController(IUnitOfWork t)
+        {
+            _unitOfWork = t;
+        }
+
         [HttpPost]
         [Route("/Login")]
         public async Task<IActionResult> Login(VMLogin viewModel)
         {
+            try
+            {
+                if (!_unitOfWork.TblUsers.Queryable().Any(a => a.UserName == viewModel.UserName))
+                {
+                    _CallResponse.IsSuccess = false;
+                    _CallResponse.Message = "Incorrect Username or Password. Please try again.";
+
+                    return Json(_CallResponse);
+                }
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+
+
             return View();
         }
         [HttpPost]

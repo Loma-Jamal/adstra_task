@@ -51,16 +51,15 @@ namespace Adstra_task
 
             services.AddDbContext<AppDBContext>(options =>
             {
-                
-                options.UseSqlServer(Configuration.GetConnectionString("DataContext"));
+                string Connection = Configuration.GetConnectionString("DataContext");
+                options.UseSqlServer(Connection);
 
             }, ServiceLifetime.Transient);
 
-        
+           
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-
 
 
         }

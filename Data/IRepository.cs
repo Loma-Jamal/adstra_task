@@ -5,18 +5,22 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-    public interface IRepository<TEntity> where TEntity :class
-    {
+public interface IRepository<TEntity> where TEntity : class
+{
 
-        void Insert(TEntity item);
+    void Insert(TEntity item);
 
-        void Update(TEntity item);
-        TEntity Update(TEntity t, params Object[] key);
-        TEntity Update(TEntity t, int Key);
-        void Delete(TEntity item);
-        Task<bool> DeleteAsync(object[] keyValues, CancellationToken cancellationToken = default);
-        Task<bool> DeleteAsync<TKey>(TKey keyValue, CancellationToken cancellationToken = default);
+    void Update(TEntity item);
+    TEntity Update(TEntity t, params Object[] key);
+    TEntity Update(TEntity t, int Key);
+    void Delete(TEntity item);
+    Task<bool> DeleteAsync(object[] keyValues, CancellationToken cancellationToken = default);
+    Task<bool> DeleteAsync<TKey>(TKey keyValue, CancellationToken cancellationToken = default);
+    Task<TEntity> Find(object[] keyValues, CancellationToken cancellationToken = default);
+    Task<TEntity> Find<TKey>(TKey keyValue, CancellationToken cancellationToken = default);
+    Task<bool> Exists(object[] keyValues, CancellationToken cancellationToken = default);
 
+    IQueryable<TEntity> Queryable();
 
     //void Get(TEntity item);
     //TEntity Get(TEntity t, params Object[] key);

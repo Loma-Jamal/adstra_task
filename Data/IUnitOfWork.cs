@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace Adstra_task
 {
-    interface IUnitOfWork: IDisposable
+   public interface IUnitOfWork
     {
-      
+        IRepository<User> TblUsers { get; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         int SaveChanges();
-
+        //Task BulkSaveChangesAsync();
+        //void BulkSaveChanges();
+    
 
 
     }
