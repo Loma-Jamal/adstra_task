@@ -1,4 +1,5 @@
 ﻿using Adstra_task.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -21,6 +22,53 @@ namespace Adstra_task
             return View();
         }
 
+        public IActionResult Profile(VMProfile vMProfile)
+        {
+            return View(vMProfile);
+        }
+
+        //[HttpPost]
+        //[Route("/Profile")]
+        //public async Task<IActionResult> Profile(VMProfile viewModel)
+        //{
+        //    try
+        //    {
+        //        if (!_unitOfWork.TblUsers.Queryable().Any(a => a.UserName == viewModel.UserName))
+        //        {
+        //            _CallResponse.IsSuccess = false;
+        //            _CallResponse.Message = "You are not registered, please sign up first.";
+
+        //            return Json(_CallResponse);
+        //        }
+        //        else if (_unitOfWork.TblUsers.Queryable().Any(a => a.UserName != viewModel.UserName || a.Password != viewModel.Password))
+        //        {
+
+        //            _CallResponse.IsSuccess = false;
+        //            _CallResponse.Message = "Incorrect Username or Password. Please try again.";
+
+        //            return Json(_CallResponse);
+        //        }
+        //        else
+        //        {
+        //            var Data = _unitOfWork.TblUsers.Queryable().Where(a => a.UserName == viewModel.UserName).FirstOrDefault();
+
+
+        //            return RedirectToAction("Profile", Data);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //    }
+
+
+
+        //    return View();
+        //}
+
+
+
+
         public HomeController(IUnitOfWork t)
         {
             _unitOfWork = t;
@@ -35,11 +83,11 @@ namespace Adstra_task
                 if (!_unitOfWork.TblUsers.Queryable().Any(a => a.UserName == viewModel.UserName))
                 {
                     _CallResponse.IsSuccess = false;
-                    _CallResponse.Message = "Incorrect Username or Password. Please try again.";
+                    _CallResponse.Message = "You are not registered, please sign up first.";
 
                     return Json(_CallResponse);
                 }
-                else if(!_unitOfWork.TblUsers.Queryable().Any(a => a.UserName != viewModel.UserName || a.Password != viewModel.Password))
+                else if(_unitOfWork.TblUsers.Queryable().Any(a => a.UserName != viewModel.UserName || a.Password != viewModel.Password))
                 {
                     
                     _CallResponse.IsSuccess = false;
@@ -49,7 +97,10 @@ namespace Adstra_task
                 }
                 else
                 {
+                    var Data = _unitOfWork.TblUsers.Queryable().Where(a => a.UserName == viewModel.UserName).FirstOrDefault();
                  
+
+                    return RedirectToAction("Profile", Data);
                 }
             }
             catch (Exception ex)

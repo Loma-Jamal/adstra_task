@@ -1,0 +1,31 @@
+﻿@model VMProfile
+
+@{
+    ViewData["Title"] = "User Profile Pag";
+}
+
+<html>
+
+
+<body>
+    <div class="Profile">
+        <h1>User Profile </h1>
+
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Profile">
+            <p> User Name</p> <p> <input type="text" name="Name" value="@Model.Name" placeholder="FullName" required></p>
+            <p> Email </p>    <p><input type="text" name="Email" value="@Model.Email" placeholder="Email" required></p>
+            <p> Mobile Number</p>   <p><input type="text" name="MobileNumber" value="@Model.MobileNumber" placeholder="MobileNumber" required></p>
+            <div>
+                <p>
+                    <input id="btnUpdate" value="Update Data" type="submit" onclick="" />
+               
+                </p>
+
+            </div>
+            <hr />
+        </form>
+    </div>
+</body>
+</html>
+
+

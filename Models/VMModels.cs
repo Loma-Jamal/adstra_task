@@ -11,6 +11,15 @@ namespace Adstra_task
         public string Password { get; set; }
     }
 
+    public class VMProfile
+    {
+
+        public string Email { get; set; }
+        public string MobileNumber { get; set; }
+        public string Name { get; set; }
+
+    }
+
     public class VMRegister
     {
         public string UserName { get; set; }

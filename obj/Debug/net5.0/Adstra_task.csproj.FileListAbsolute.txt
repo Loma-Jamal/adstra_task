@@ -150,3 +150,4 @@ C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\ref\Adstra_task.dll
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra_task.pdb
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra_task.genruntimeconfig.cache
+C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
