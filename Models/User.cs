@@ -23,7 +23,9 @@ namespace Adstra_task
         [Required]
         public string MobileNumber { get; set; }
         [Required]
-        public string SubscriptionDate { get; set; } 
+        public string SubscriptionDate { get; set; }
+        [Required]
+        public string Password { get; set; }
 
 
     }

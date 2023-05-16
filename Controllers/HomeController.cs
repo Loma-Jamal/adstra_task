@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Adstra_task
 {
-    public class HomeController :Controller
+    public class HomeController : Controller
     {
 
         IUnitOfWork _unitOfWork;
@@ -39,9 +39,20 @@ namespace Adstra_task
 
                     return Json(_CallResponse);
                 }
+                else if(!_unitOfWork.TblUsers.Queryable().Any(a => a.UserName != viewModel.UserName || a.Password != viewModel.Password))
+                {
+                    
+                    _CallResponse.IsSuccess = false;
+                    _CallResponse.Message = "Incorrect Username or Password. Please try again.";
 
+                    return Json(_CallResponse);
+                }
+                else
+                {
+                 
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
