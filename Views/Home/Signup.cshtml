@@ -1,0 +1,76 @@
+﻿@model VMRegister
+
+@{
+    ViewData["Title"] = "User Profile Pag";
+    Layout = "_LayoutLogin";
+
+}
+
+<html>
+
+
+<body>
+    <div class="Profile">
+        <h2>Pleas fill your Infromation </h2>
+
+        <form method="post" enctype="multipart/form-data">
+            <p> User Name</p> <p> <input type="text" id="Name" value="" placeholder="FullName" required=""></p>
+            <p> Email </p>    <p><input type="text" id="Email" value=""  placeholder="Email" required=""></p>
+            <p> Mobile Number</p>   <p><input type="text" id="MobileNumber" value="" placeholder="MobileNumber" required=""></p>
+            <p> User Name</p> <p> <input type="text" id="UserName" value="" placeholder="User Name" required=""></p>
+            <p> Password</p> <p> <input type="password" id="Password" value="" placeholder="Password" required=""></p>
+            <div>
+                <p>
+                    <input id="btnUpdate" value="Confirm" type="submit" onclick="SignUP()" />
+
+                </p>
+
+            </div>
+            <hr />
+        </form>
+    </div>
+</body>
+</html>
+
+
+@section scripts
+{
+    <script>
+        function SignUP() {
+
+            $.ajax({
+                type: "Post",
+                url: '@Url.Action("RegisterUser", "Home")',
+                dataType: "JSON",
+                async: false,
+                data: {
+                    Name: $("#Name").val(),
+                    Email: $("#Email").val(),
+                    MobileNumber: $("#MobileNumber").val(),
+                    UserName: $("#UserName").val(),
+                    Password: $("#Password").val(),
+
+                },
+                success: function (data) {
+                    debugger;
+                    if (data.isSuccess == true) {
+                        alert("your profile has been added");
+                        setTimeout(() => {
+                            window.location = '@Url.Action("Login", "Home")';
+                        }, 5);
+                    }
+                    else {
+                        alert(data.message);
+                    }
+
+                },
+                error: function (result) {
+                    alert("something went wrong please try again");
+                }
+            })
+        }
+    </script>
+
+}
+
+

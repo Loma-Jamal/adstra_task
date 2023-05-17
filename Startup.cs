@@ -34,7 +34,10 @@ namespace Adstra_task
 
             services.AddCors(); // Make sure you call this previous to AddMvc
 
-
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);//You can set Time   
+            });
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",
@@ -81,6 +84,8 @@ namespace Adstra_task
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthorization();
 

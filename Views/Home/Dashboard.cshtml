@@ -1,0 +1,33 @@
+﻿@model VMProfile
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+
+
+}
+
+<html>
+
+
+<body>
+    <div class="Profile">
+        <h3>User Information</h3>
+
+        <form>
+            <hr >
+            <p> User Name: @Model.Name </p>
+            <p> Email:@Model.Email </p>
+            <p> Mobile Number: @Model.MobileNumber </p>
+
+            <hr />
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+

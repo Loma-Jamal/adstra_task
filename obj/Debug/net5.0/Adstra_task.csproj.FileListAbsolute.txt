@@ -151,3 +151,11 @@ C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\ref\Ad
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra_task.pdb
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra_task.genruntimeconfig.cache
 C:\Users\labuhaweleh\Source\Repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\bin\Debug\net5.0\Adstra_task.StaticWebAssets.xml
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Adstra_task.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Users\labuhaweleh\source\repos\Loma-Jamal\adstra_task\obj\Debug\net5.0\Razor\Views\Home\Signup.cshtml.g.cs

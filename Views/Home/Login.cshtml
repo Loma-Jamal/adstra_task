@@ -2,6 +2,9 @@
 
 @{
     ViewData["Title"] = "Login Pag";
+    Layout = "_LayoutLogin";
+
+
 }
 
 <html>
@@ -12,18 +15,23 @@
         <h1>Login to the system </h1>
 
         <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Login">
-            <p><input type="text" name="UserName"  value="" placeholder="Username" required></p>
+            <p><input type="text" name="UserName" value="" placeholder="Username" required></p>
             <p><input type="password" name="Password" value="" placeholder="Password" required></p>
 
             <div>
-                <p >  <input id="btnLogin" value="Login" type="submit" onclick="$(this).closest('form').submit();" />
-                <input id="btn Singup" value=" Sing up" type="submit" /> </p>
-                
+                <p>
+                    <input id="btnLogin" value="Login" type="submit" onclick="$(this).closest('form').submit();" />
+           
+                </p>
+
             </div>
             <hr />
         </form>
+
+        <input id="btn Singup" value=" Sing up" type="submit" onclick="location.href = '@Url.Action("Signup", "Home")'" />
     </div>
 </body>
 </html>
+
 
 
